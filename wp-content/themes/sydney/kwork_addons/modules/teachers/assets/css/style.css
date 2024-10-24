@@ -1,0 +1,83 @@
+.add_teacher_to_lesson {
+  width: 100%;
+  padding: 8px;
+  font-size: 10px;
+  background-color: transparent;
+  border: solid 2px rgb(31, 81, 138);
+  color: rgb(31, 81, 138);
+  transition: 0.3s;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.add_teacher_to_lesson:not([disabled]):hover {
+  color: #8fb8e6;
+  border-color: #8fb8e6;
+}
+.add_teacher_to_lesson:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.add_teacher_to_lesson:disabled:hover {
+  color: rgb(31, 81, 138);
+}
+
+body .wpuf-dashboard-container table.items-table .post_teachers {
+  min-width: 300px;
+}
+body .wpuf-dashboard-container table.items-table .post_teachers p {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+body .wpuf-dashboard-container table.items-table .post_teachers p a {
+  color: rgb(31, 81, 138) !important;
+}
+body .wpuf-dashboard-container table.items-table .message_invation {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.nastavnik_add_lesson__btns,
+.invation_to_teacher_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nastavnik_add_lesson__btns .nastavnik_add_lesson__confirm,
+.nastavnik_add_lesson__btns .invation_teacher_accept,
+.invation_to_teacher_buttons .nastavnik_add_lesson__confirm,
+.invation_to_teacher_buttons .invation_teacher_accept {
+  margin-right: 8px;
+}
+.nastavnik_add_lesson__btns > button,
+.invation_to_teacher_buttons > button {
+  width: 50%;
+  padding: 8px;
+  font-size: 10px;
+  background-color: transparent;
+  border: solid 2px rgb(31, 81, 138);
+  color: rgb(31, 81, 138);
+  transition: 0.3s;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.nastavnik_add_lesson__btns > button:not([disabled]):hover,
+.invation_to_teacher_buttons > button:not([disabled]):hover {
+  color: #8fb8e6;
+  border-color: #8fb8e6;
+}
+.nastavnik_add_lesson__btns > button:disabled,
+.invation_to_teacher_buttons > button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.nastavnik_add_lesson__btns > button:disabled:hover,
+.invation_to_teacher_buttons > button:disabled:hover {
+  color: rgb(31, 81, 138);
+}/*# sourceMappingURL=style.css.map */

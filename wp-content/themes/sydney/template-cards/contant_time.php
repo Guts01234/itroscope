@@ -1,0 +1,135 @@
+<?php
+/**
+ * @package Sydney
+ */
+
+$post_id = get_the_ID();
+$time_state = get_field('cart_state');
+$time_much = get_field('time_how_much');
+$time_town = get_field('time_town');
+
+?>
+
+<article  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<div class="container_l cart_stat cart_time">
+     <a href="<?php the_permalink(); ?>">
+		<?php
+            $sfer = wp_get_post_terms( get_the_ID(), 'sfera', array('fields' => 'names') );
+            echo_cute_sfer($sfer[0], $sfer[0], 'sfer--up sfer--up__teor');
+		?>
+		<div class='content_cart'>
+			<div class="content_cart__up">
+				<div class="cont_img">
+					<?php 
+					$author_avatar =  get_avatar_url(get_the_author_meta('ID'));
+					if($author_avatar && !strripos($author_avatar, 'default')){
+						echo "<img src='{$author_avatar}' alt='author'>";
+					}elseif(get_the_post_thumbnail()){
+						the_post_thumbnail(); 
+					}else{
+                        echo "<img src='https://cdn-icons-png.flaticon.com/512/3593/3593455.png' alt='placeholder'>";
+                    }
+					?>
+				</div>
+				<header class="entry-header cart-title"><h2 class="title-post entry-title"><?php
+					if($time_state == 'give'){
+                        echo 'Отдам. ';
+                    }elseif($time_state == 'take'){
+                        echo 'Получу. ';
+                    }
+
+                    if($time_town){
+                        echo $time_town . '. ';
+                    }
+
+                    echo get_the_title();
+
+					?></h2>
+				</header>
+			</div>
+
+      		<div class="naviks_and_problems">
+				<div class="naviks_and_problems__teor">
+                    <div class="naviks">
+                    <?php
+                        $navik_list = wp_get_post_terms( get_the_ID(), 'navik', array('fields' => 'names') );
+                        if(count($navik_list)):
+                        ?>
+                            <p class="navik_uptitle">Навык</p>
+                            <div class="naviks_lent">
+                                <?php  foreach ($navik_list as $key => $name) {
+                                ?>
+                                <div class="navik">
+                                    <p><?php echo $name; ?> <b>+1</b></p>
+                                </div>
+                                <?php
+                                } ?>
+                            </div>
+                        <?php endif;?>
+                    </div>
+                    <div class="propblems">
+                    <?php
+                        $problem_list = wp_get_post_terms( get_the_ID(), 'problem', array('fields' => 'names') );
+                        if(count($problem_list)):
+                        ?>
+                            <p class="propblems_uptitle">Проблема</p>
+                            <div class="naviks_lent">
+                                <?php  foreach ($problem_list as $key => $name) {
+                                ?>
+                                <div class="navik ploblem_stat">
+                                    <p><?php echo $name; ?> <b>-1</b></p>
+                                </div>
+                                <?php
+                                } ?>
+                            </div>
+                        <?php endif;?>
+                    </div>
+				</div>
+			</div>
+	    </div>
+     </a>
+		 <div class='stat_read_post_cart'>
+			 <div>
+				 <span><img src="<?php echo get_template_directory_uri(); ?>/images/person.svg" title='Прочитали' alt="Просмотрено"></span>
+   			<span><?php
+   			$user_scroll = get_post_meta( get_the_ID(), $key = 'users_scroll')[0];
+   			if(!isset($user_scroll)){
+   				$user_scroll = 0;
+   			}
+   			echo $user_scroll;
+
+   			 ?></span>
+   			<span><img src="<?php echo get_template_directory_uri(); ?>/images/money.svg" title='Купили' alt="Добавлено в паспорт"></span>
+   			<span><?php
+   			$users_buy = get_post_meta( get_the_ID(), $key = 'users_buy')[0];
+   			if(!isset($users_buy)){
+				   $users_buy = 0;
+				}
+				echo $users_buy;
+   			 ?></span>
+			 </div>
+			 <p class='price_cart'>
+                <?php
+                    switch ($time_much) {
+                        case '30m':
+                            echo '30 Минут';
+                            break;
+                        
+                        case '1h':
+                            echo '1 час';
+                            break;
+
+                        case '2h':
+                            echo '2 час';
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                ?> 
+             </p>
+		 </div>
+   </div>
+
+</article><!-- #post-## -->

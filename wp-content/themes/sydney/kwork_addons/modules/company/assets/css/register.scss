@@ -1,0 +1,16 @@
+.um-register {
+    display: none;
+}
+
+.reg_page_radios__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.reg_page_radios__radio {
+    margin-right: 20px;
+    input {
+        margin-left: 10px;
+    }
+}

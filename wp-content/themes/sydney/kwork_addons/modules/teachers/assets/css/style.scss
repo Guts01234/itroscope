@@ -1,0 +1,81 @@
+$button_color: rgb(31, 81, 138);
+
+.add_teacher_to_lesson {
+    width: 100%;
+    padding: 8px;
+    font-size: 10px;
+    background-color: transparent;
+    border: solid 2px $button_color;
+    color: $button_color;
+    transition: 0.3s;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    &:not([disabled]):hover {
+        color: lighten($color: $button_color, $amount: 40);
+        border-color: lighten($color: $button_color, $amount: 40);
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        &:hover {
+            color: $button_color;
+        }
+    }
+}
+
+body .wpuf-dashboard-container table.items-table {
+    .post_teachers {
+        min-width: 300px;
+        p {
+            font-size: 12px;
+            margin-bottom: 8px;
+            a {
+                color: $button_color !important;
+            }
+        }
+    }
+    .message_invation {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+}
+
+.nastavnik_add_lesson__btns,
+.invation_to_teacher_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .nastavnik_add_lesson__confirm,
+    .invation_teacher_accept {
+        margin-right: 8px;
+    }
+    > button {
+        width: 50%;
+        padding: 8px;
+        font-size: 10px;
+        background-color: transparent;
+        border: solid 2px $button_color;
+        color: $button_color;
+        transition: 0.3s;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        &:not([disabled]):hover {
+            color: lighten($color: $button_color, $amount: 40);
+            border-color: lighten($color: $button_color, $amount: 40);
+        }
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            &:hover {
+                color: $button_color;
+            }
+        }
+    }
+}

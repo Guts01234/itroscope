@@ -1,0 +1,465 @@
+# Translation of Plugins - Check &amp; Log Email - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Check &amp; Log Email - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-02-24 21:20:15+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-beta.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Check &amp; Log Email - Stable (latest release)\n"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:387
+msgid "Check this box if you would like override wordpress default from email and name."
+msgstr "Установите этот флажок, если вы хотите переопределить стандартные параметры wordpress - email и имя."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:21
+msgid "Change the \"from\" email."
+msgstr "Измените электронную почту \"от\"."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:20
+msgid "Change the \"from\" name."
+msgstr "Измените имя \"от\"."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:19
+msgid "Override Emails From"
+msgstr "Отмена писем от"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:164
+msgid "WP SMTP is allready installed and activated."
+msgstr "WP SMTP уже установлен и активирован."
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:158
+msgid "Click to %s WP SMTP"
+msgstr "Нажмите на %s WP SMTP"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:157
+msgid "%s SMTP"
+msgstr "%s SMTP"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:140
+msgid "Install WP SMTP"
+msgstr "Установка WP SMTP"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:123
+msgid "WP SMTP Installer"
+msgstr "Установщик WP SMTP"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:113
+msgid "Suggest a feature"
+msgstr "Предложить функционал"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:112
+msgid "SMTP"
+msgstr "SMTP"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:111
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:121
+msgid "Logging"
+msgstr "Журналирование"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:110
+msgid "General"
+msgstr "Общие"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:98
+msgid "\\r\\n"
+msgstr "\\r\\n"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:97
+msgid "\\n"
+msgstr "\\n"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:71
+msgid "Content-Type: %s"
+msgstr "Тип содержимого: %s"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:70
+msgid "From: %s"
+msgstr "От: %s"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:69
+msgid "MIME-Version: %s"
+msgstr "MIME-версия: %s"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:51
+msgid "Content-Type:"
+msgstr "Тип содержимого:"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:48
+msgid "CharSet:"
+msgstr "Набор символов:"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:45
+msgid "Port:"
+msgstr "Порт:"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:42
+msgid "Host:"
+msgstr "Хост:"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:39
+msgid "SendMail path:"
+msgstr "Путь к SendMail:"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:36
+msgid "Mailer:"
+msgstr "Mailer:"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:20
+msgid "for more information. The headers sent were :"
+msgstr "для получения дополнительной информации. Отправленные заголовки были :"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:20
+msgid "wp_mail in the Codex"
+msgstr "wp_mail в Codex"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:19
+msgid "The test email has been sent by WordPress. Please note this does NOT mean it has been delivered. See"
+msgstr "Тестовое письмо было отправлено WordPress. Обратите внимание, что это НЕ означает, что оно было доставлено. См."
+
+#: include/Core/UI/Page/Check_Email_Status_Page.php:142
+msgid "This test email proves that your WordPress installation at %1$s can send emails.\\n\\nSent: %2$s"
+msgstr "Это тестовое письмо доказывает, что ваша установка WordPress на%1$s может отправлять сообщения электронной почты. \\ n \\ согласие:%2$s"
+
+#: include/Core/UI/Page/Check_Email_Status_Page.php:141
+msgid "Test email from %s "
+msgstr "Тестовое письмо от %s "
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:219
+msgid "Note"
+msgstr "Примечание"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:62
+msgid "Headers"
+msgstr "Заголовки"
+
+#: check-email.php:46
+msgid "Check & Log Email requires at least PHP 5.6 to function properly. Please upgrade PHP."
+msgstr "Для правильной работы Check & Log Email требуется PHP не ниже 5.6. Пожалуйста, обновите PHP."
+
+#: include/Core/UI/Page/Check_Email_Status_Page.php:42
+#: include/Core/UI/Page/Check_Email_Status_Page.php:43
+#: include/Core/UI/Page/Check_Email_Status_Page.php:54
+msgid "Status"
+msgstr "Статус"
+
+#: include/Core/UI/Page/Check_Email_Log_List_Page.php:81
+msgid "Entries per page"
+msgstr "Записей на страницу"
+
+#: include/Core/UI/Page/Check_Email_Log_List_Page.php:62
+msgid "Search Logs"
+msgstr "Журналы поиска"
+
+#: include/Core/UI/Page/Check_Email_Log_List_Page.php:57
+msgid "Email Logs"
+msgstr "Журналы почты"
+
+#: include/Core/UI/Page/Check_Email_Log_List_Page.php:33
+#: include/Core/UI/Page/Check_Email_Log_List_Page.php:34
+msgid "View Logs"
+msgstr "Просмотр журналов"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:133
+msgid "Save"
+msgstr "Сохранить"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:64
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:65
+msgid "Settings"
+msgstr "Настройки"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:371
+msgid " email log"
+msgid_plural " email logs"
+msgstr[0] "журнал email"
+msgstr[1] "журнала email"
+msgstr[2] "журналов email"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:370
+msgid "Currently there are %1$s logged, which is more than the threshold. You can delete some logs or increase the threshold."
+msgstr "В настоящее время зарегистрировано %1$s, что превышает пороговое значение. Вы можете удалить некоторые журналы или увеличить порог."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:343
+msgid "Check & Log Email: Your log threshold of %s has been met"
+msgstr "Проверьте и запишите электронную почту: Ваш порог журнала %s достигнут"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:229
+msgid "Last notification email was sent on %1$s. Click %2$s button to reset sending the notification."
+msgstr "Последнее письмо с уведомлением было отправлено на %1$s. Нажмите кнопку %2$s, чтобы возобновить отправку уведомления."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:218
+msgid "%1$s There are %2$s email logs currently logged in the database."
+msgstr "%1$s В настоящее время в базе данных зарегистрировано %2$s журналов электронной почты."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:208
+msgid "Notify %1$s if there are more than %2$s logs."
+msgstr "Уведомляйте %1$s, если журналов больше %2$s."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:164
+msgid "Check this box if you would like to enable dashboard widget."
+msgstr "Установите этот флажок, если вы хотите включить виджет консоли."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:123
+msgid "Check this box if you would like to completely remove all of its data when the plugin is deleted."
+msgstr "Установите этот флажок, если вы хотите полностью удалить все его данные при удалении плагина."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:107
+msgid "Check this box if you would like to log your emails."
+msgstr "Установите этот флажок, если вы хотите регистрировать свои электронные письма."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:85
+msgid "Administrator always has access and cannot be disabled."
+msgstr "Администратор всегда имеет доступ и не может быть отключен."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:84
+msgid "<strong>Note:</strong> Users with the above User Roles can view Status and Logs Page."
+msgstr "<strong>Примечание:</strong> Пользователи с указанными выше ролями пользователей могут просматривать страницу состояния и журналов."
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:70
+msgid "Administrator"
+msgstr "Администратор"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:18
+msgid "Remove Data on Uninstall?"
+msgstr "Удалить данные при деинсталляции?"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:24
+msgid "Database Size Notification"
+msgstr "Уведомление о размере базы данных"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:23
+msgid "Enable Dashboard Widget"
+msgstr "Включить виджет консоли"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:22
+msgid "Enable Logs"
+msgstr "Включить журналы"
+
+#: include/Core/UI/Setting/Check_Email_Core_Setting.php:17
+msgid "Allowed User Roles"
+msgstr "Разрешенные роли пользователей"
+
+#: include/Core/UI/Page/Check_Email_Settings_Page.php:119
+msgid "Core Check Email Log Settings"
+msgstr "Настройки журнала проверки электронной почты ядра"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:217
+msgid "Search by term"
+msgstr "Поиск по термину"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:216
+msgid "Search by date"
+msgstr "Поиск по дате"
+
+#: include/Core/UI/Component/Check_Email_Dashboard_Widget.php:39
+msgid "<a href=\"%s\">Settings</a>"
+msgstr "<a href=\"%s\">Настройки</a>"
+
+#: include/Core/UI/Component/Check_Email_Dashboard_Widget.php:38
+msgid "<a href=\"%s\">Email Logs</a>"
+msgstr "<a href=\"%s\">Журналы электронных писем</a>"
+
+#: include/Core/UI/Component/Check_Email_Dashboard_Widget.php:37
+msgid "<a href=\"%s\">Status</a>"
+msgstr "<a href=\"%s\">Статус</a>"
+
+#: include/Core/UI/Component/Check_Email_Dashboard_Widget.php:29
+msgid "Total number of emails logged"
+msgstr "Общее количество зарегистрированных электронных писем"
+
+#: include/Core/UI/Component/Check_Email_Dashboard_Widget.php:15
+msgid "Check Email Summary"
+msgstr "Проверка сводки по электронной почте"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:152
+msgid "1 email log deleted."
+msgid_plural "%s email logs deleted"
+msgstr[0] "журнал email удален."
+msgstr[1] "журнала email удалены."
+msgstr[2] "журналов email удалены."
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:148
+msgid "There was some problem in deleting the email logs"
+msgstr "Возникла проблема с удалением журналов электронной почты"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:86
+msgid "Close"
+msgstr "Закрыть"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:73
+msgid "Preview Content as HTML"
+msgstr "Предварительный просмотр содержимого как HTML"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:72
+msgid "Raw Email Content"
+msgstr "Необработанный контент электронной почты"
+
+#: include/Util/helper.php:152
+msgid "Sent Status"
+msgstr "Статус отправки"
+
+#: include/Util/helper.php:151
+msgid "IP Address"
+msgstr "IP-адрес"
+
+#: include/Util/helper.php:150
+msgid "Reply To"
+msgstr "Ответить на"
+
+#: include/Util/helper.php:149
+msgid "BCC"
+msgstr "Скрытая копия"
+
+#: include/Util/helper.php:145
+msgid "Attachment"
+msgstr "Вложение"
+
+#: include/Util/helper.php:144
+msgid "Message"
+msgstr "Сообщение"
+
+#: include/Util/helper.php:140
+msgid "ID"
+msgstr "ID"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:197
+msgid "Your email log is empty"
+msgstr "Журнал электронной почты пуст"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:170
+msgid "Delete All Logs"
+msgstr "Удалить все журналы"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:92
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:169
+msgid "Delete"
+msgstr "Удалить"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:78
+msgid "View Content"
+msgstr "Посмотреть содержимое"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:77
+msgid "Email Content"
+msgstr "Содержимое письма"
+
+#: include/Core/UI/list_table/Check_Email_Log_List_Table.php:59
+msgid "%s @ %s"
+msgstr "%s @ %s"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:58
+#: include/Util/helper.php:143
+msgid "Subject"
+msgstr "Тема"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:54
+#: include/Util/helper.php:141
+msgid "To"
+msgstr "Кому"
+
+#: include/Core/Request/Check_Email_Log_List_Action.php:50
+#: include/Util/helper.php:146
+msgid "Sent at"
+msgstr "Отправлено"
+
+#. Description of the plugin
+#: check-email.php
+msgid "Check & Log email allows you to test if your WordPress installation is sending emails correctly and logs every email."
+msgstr "Check & Log email позволяет проверить, правильно ли ваша установка WordPress отправляет электронные письма, и регистрирует каждое письмо."
+
+#. Plugin Name of the plugin
+#: check-email.php include/Core/UI/Page/Check_Email_Status_Page.php:31
+#: include/Core/UI/Page/Check_Email_Status_Page.php:32
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:29
+msgid "Check & Log Email"
+msgstr "Check & Log Email"
+
+#: include/Core/Check_Email_Review.php:21
+msgid "Don't show again"
+msgstr "Больше не показывать"
+
+#: include/Core/Check_Email_Review.php:20
+msgid "Remind me later"
+msgstr "Напомнить позже"
+
+#: include/Core/Check_Email_Review.php:19
+msgid "Rate the plugin"
+msgstr "Оцените плагин"
+
+#: include/Core/Check_Email_Review.php:18
+msgid "Hi there! Stoked to see you're using Check & Log Email for a few days now - hope you like it! And if you do, please consider rating it. It would mean the world to us.  Keep on rocking!"
+msgstr "Привет! Рад видеть, что вы используете Check & Log Email уже несколько дней - надеюсь, вам это нравится! А если понравится, пожалуйста, оцените его. Для нас это будет очень важно.  Продолжайте в том же духе!"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:106
+msgid "Send test email"
+msgstr "Отправить тестовый e-mail"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:105
+msgid "Send"
+msgstr "Отправить"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:96
+msgid "Header line break type"
+msgstr "Тип заглавной разделяющей линии"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:92
+#: include/Util/helper.php:148
+msgid "CC"
+msgstr "Копия"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:88
+#: include/Util/helper.php:142 include/Util/helper.php:147
+msgid "From"
+msgstr "От"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:84
+msgid "Content type"
+msgstr "Тип содержимого"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:80
+msgid "MIME Version"
+msgstr "Версия MIME"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:78
+msgid "Set your custom headers below"
+msgstr "Установите пользовательские заголовки ниже"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:74
+msgid "Use custom headers"
+msgstr "Использовать пользовательские заголовки"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:64
+msgid "Use standard headers"
+msgstr "Использовать стандартные заголовки"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:60
+msgid "Send test email to"
+msgstr "Отправить тестовое письмо на"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:57
+msgid "Send a test email"
+msgstr "Отправить тестовый e-mail"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:33
+msgid "Current mail settings"
+msgstr "Текущие настройки e-mail"
+
+#: include/Core/UI/Page/partials/check-email-admin-status-display.php:25
+msgid "Security check failed"
+msgstr "Сбой проверки безопасности"
+
+#: include/Core/UI/Page/Check_Email_Status_Page.php:77
+msgid "Click here"
+msgstr "Нажмите здесь"
+
+#: include/Core/UI/Page/Check_Email_Status_Page.php:76
+msgid "Help us build the next set of features for Check & Log Email. Tell us what you think and we will make it happen!"
+msgstr "Помогите нам создать следующий набор функций для Check & Log Email. Расскажите нам, что вы думаете, и мы воплотим это в жизнь!"
+
+#: include/Core/UI/Page/Check_Email_Status_Page.php:73
+msgid "Suggest a new feature!"
+msgstr "Предложите новую функцию!"

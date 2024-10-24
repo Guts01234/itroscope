@@ -1,0 +1,96 @@
+.kw_df_r {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.notification__block {
+    position: relative;
+    .cont_img {
+        position: relative;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    span {
+        cursor: pointer;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(245, 138, 169);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 500;
+    }
+    @media (max-width: 1024px) {
+        .cont_img {
+            margin-right: 10px;
+            width: 26px;
+            height: 26px;
+        }
+        span {
+            width: 15px;
+            height: 15px;
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 500px) {
+        position: inherit;
+    }
+}
+
+.notifications_row {
+    display: none;
+    padding: 20px 0;
+    position: absolute;
+    background-color: white;
+    max-width: 400px;
+    width: 100vw;
+    max-height: 500px;
+    overflow-y: scroll;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    .notification {
+        border-bottom: solid 1px rgba(229, 230, 245, 0.767);
+        padding: 10px 20px;
+        p {
+            margin-bottom: 0;
+        }
+        &__title {
+            .title {
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .time {
+                margin-bottom: 3px;
+                font-size: 10px;
+                text-align: right;
+            }
+        }
+        &__readed {
+            background-color: rgb(251, 251, 251);
+            opacity: 0.9;
+        }
+    }
+    @media (max-width: 1024px) {
+        right: 0;
+    }
+    @media (max-width: 500px) {
+        z-index: 1000;
+        position: fixed;
+        max-width: 100vw;
+        max-height: none;
+        bottom: 0;
+        top: 20%;
+    }
+}
