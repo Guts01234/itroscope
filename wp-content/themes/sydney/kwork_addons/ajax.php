@@ -16,7 +16,7 @@ function filt_m()
 
   $args = [
     'posts_per_page' => -1,
-    'post_type' => array('post', 'time', 'gift', 'services'),
+    'post_type' => array('post', 'time', 'gift', 'service'),
     'post__not_in' => get_option('sticky_posts'),
     'post_status' => 'publish',
     'tax_query' => [
@@ -137,7 +137,7 @@ function filt_m()
   //получаем открытые уроки
   $query1 = new WP_Query(
     array(
-      'post_type' => array('post', 'time', 'gift', 'services'),
+      'post_type' => array('post', 'time', 'gift', 'service'),
       'post__not_in' => get_option('sticky_posts'),
       'posts_per_page' => -1,
       'meta_query' => array(
@@ -155,7 +155,7 @@ function filt_m()
   //остальные записи
   $query2 = new WP_Query(
     array(
-      'post_type' => array('post', 'time', 'gift', 'services'),
+      'post_type' => array('post', 'time', 'gift', 'service'),
       'post__not_in' => get_option('sticky_posts'),
       'posts_per_page' => -1,
       'author__not_in' => $authors_not,
@@ -181,7 +181,7 @@ function filt_m()
   $final_ids = array_uintersect($post_ids3, $allTheIDs, "strcasecmp");
   query_posts(
     array(
-      'post_type' => array('post', 'time', 'gift', 'services'),
+      'post_type' => array('post', 'time', 'gift', 'service'),
       'post__in' => $final_ids,
       'orderby' => 'rand(' . rand() . ')',
       'posts_per_page' => 12,
@@ -198,8 +198,8 @@ function filt_m()
         get_template_part('template-cards/contant_gift', get_post_format());
       } else if (get_post_type() == 'time') {
         get_template_part('template-cards/contant_time', get_post_format());
-      } else if (get_post_type() == 'services') {
-        get_template_part('template-cards/contant_services', get_post_format());
+      } else if (get_post_type() == 'service') {
+        get_template_part('template-cards/contant_service', get_post_format());
       } else {
         get_template_part('template-cards/contant_main', get_post_format());
       }
@@ -246,7 +246,7 @@ function filter_new()
   $gift_types    = $_POST['gift_type'];
 
   if (!$types) {
-    $types = ['post', 'gift', 'lesson', 'services'];
+    $types = ['post', 'gift', 'lesson', 'service'];
   }
 
   //получаем id компаний
@@ -329,9 +329,9 @@ function filter_new()
   ];
 
   //запрос для услуг
-  $args_services = [
+  $args_service = [
     'posts_per_page' => -1,
-    'post_type' => array('services'),
+    'post_type' => array('service'),
     'post__not_in' => get_option('sticky_posts'),
     'post_status' => 'publish',
     'author__not_in' => $authors_not,
@@ -349,9 +349,9 @@ function filter_new()
   ];
 
   //запрос для услуг компании открытых
-  $args_services__free = [
+  $args_service__free = [
     'posts_per_page' => -1,
-    'post_type' => array('services'),
+    'post_type' => array('service'),
     'post__not_in' => get_option('sticky_posts'),
     'post_status' => 'publish',
     'author__in' => $authors_not,
@@ -465,8 +465,8 @@ function filter_new()
     ];
     array_push($args_lesson['tax_query'], $add);
     array_push($args_time['tax_query'], $add);
-    array_push($args_services['tax_query'], $add);
-    array_push($args_services__free['tax_query'], $add);
+    array_push($args_service['tax_query'], $add);
+    array_push($args_service__free['tax_query'], $add);
     array_push($args_time__free['tax_query'], $add);
   }
 
@@ -479,8 +479,8 @@ function filter_new()
     ];
     array_push($args_lesson['tax_query'], $add);
     array_push($args_time['tax_query'], $add);
-    array_push($args_services['tax_query'], $add);
-    array_push($args_services__free['tax_query'], $add);
+    array_push($args_service['tax_query'], $add);
+    array_push($args_service__free['tax_query'], $add);
     array_push($args_lesson__free['tax_query'], $add);
     array_push($args_time__free['tax_query'], $add);
   }
@@ -494,8 +494,8 @@ function filter_new()
     ];
     array_push($args_lesson['tax_query'], $add);
     array_push($args_time['tax_query'], $add);
-    array_push($args_services['tax_query'], $add);
-    array_push($args_services__free['tax_query'], $add);
+    array_push($args_service['tax_query'], $add);
+    array_push($args_service__free['tax_query'], $add);
     array_push($args_lesson__free['tax_query'], $add);
     array_push($args_time__free['tax_query'], $add);
   }
@@ -643,14 +643,14 @@ function filter_new()
 
   //вливаем услуги
 
-  if (in_array('services', $types) || !is_array($types)) {
-    $services_query = new WP_Query($args_services);
-    $services_ids = wp_list_pluck($services_query->posts, 'ID');
+  if (in_array('service', $types) || !is_array($types)) {
+    $service_query = new WP_Query($args_service);
+    $service_ids = wp_list_pluck($service_query->posts, 'ID');
 
-    $services_query__free = new WP_Query($args_services__free);
-    $services__free_ids = wp_list_pluck($services_query__free->posts, 'ID');
+    $service_query__free = new WP_Query($args_service__free);
+    $service__free_ids = wp_list_pluck($service_query__free->posts, 'ID');
 
-    $final_ids = array_merge($final_ids, $services_ids, $services__free_ids);
+    $final_ids = array_merge($final_ids, $service_ids, $service__free_ids);
   }
 
 
@@ -678,8 +678,8 @@ function filter_new()
         get_template_part('template-cards/contant_gift', get_post_format());
       } else if (get_post_type() == 'time') {
         get_template_part('template-cards/contant_time', get_post_format());
-      } else if (get_post_type() == 'services') {
-        get_template_part('template-cards/contant_services', get_post_format());
+      } else if (get_post_type() == 'service') {
+        get_template_part('template-cards/contant_service', get_post_format());
       } else {
         get_template_part('template-cards/contant_main', get_post_format());
       }
@@ -734,8 +734,8 @@ function loadmore_k()
         get_template_part('template-cards/contant_gift', get_post_format());
       } else if (get_post_type() == 'time') {
         get_template_part('template-cards/contant_time', get_post_format());
-      } else if (get_post_type() == 'services') {
-        get_template_part('template-cards/contant_services', get_post_format());
+      } else if (get_post_type() == 'service') {
+        get_template_part('template-cards/contant_service', get_post_format());
       } else {
         get_template_part('template-cards/contant_main', get_post_format());
       }

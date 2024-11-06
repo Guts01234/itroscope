@@ -896,7 +896,7 @@
 				$('.modal_filter__list__item__navik').fadeOut()
 				$('.modal_filter__list__item__problem').fadeOut()
 			}
-			if (checkboxes.includes('services')) {
+			if (checkboxes.includes('service')) {
 				$('.modal_filter__list__item__navik').fadeIn()
 				$('.modal_filter__list__item__problem').fadeIn()
 			} else {

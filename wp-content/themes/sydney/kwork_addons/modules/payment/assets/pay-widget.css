@@ -1,0 +1,75 @@
+.payform-tbank {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 2px auto;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	max-width: 600px;
+}
+
+.payform-tbank-row {
+	margin: 2px;
+	border-radius: 4px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	border: 1px solid #dfe3f3;
+	padding: 15px 20px !important;
+	outline: none;
+	font-size: 16px;
+	border-radius: 30px !important;
+	margin-bottom: 10px;
+}
+
+.payform-tbank-row:focus {
+	background-color: #ffffff;
+	border: 1px solid #616871;
+	border-radius: 4px;
+}
+
+.payform-tbank-btn {
+	background-color: rgb(26, 115, 232);
+	color: #ffff;
+}
+
+.payform-tbank-btn:hover {
+	border: 1px solid rgb(26, 115, 232) !important;
+	color: black !important;
+}
+
+label {
+	margin-left: 20px;
+}
+
+h4 {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.form__descr {
+	margin: 10px 0 20px 0;
+
+	> p {
+		color: rgb(102, 102, 102);
+	}
+}
+
+.checkbox__block {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	> label {
+		margin-left: 0;
+		margin-bottom: -3.5px;
+		padding-bottom: 0;
+		font-weight: normal;
+	}
+}

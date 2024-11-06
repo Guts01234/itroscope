@@ -5,13 +5,13 @@
  */
 
 $post_id = get_the_ID();
-$services_price = get_field('time_how_much');
+$service_price = get_field('service_price');
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="container_l cart_stat cart_services">
+	<div class="container_l cart_stat cart_service">
 		<a href="<?php the_permalink(); ?>">
 			<?php
 			$sfer = wp_get_post_terms(get_the_ID(), 'sfera', array('fields' => 'names'));
@@ -108,7 +108,7 @@ $services_price = get_field('time_how_much');
 			</div>
 			<p class='price_cart'>
 				<?php
-				$services_price
+				$service_price
 				?>
 			</p>
 		</div>

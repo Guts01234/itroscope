@@ -1,10 +1,10 @@
 <?php
 
-add_action('init', 'register_services_type');
+add_action('init', 'register_service_type');
 
-function register_services_type()
+function register_service_type()
 {
-	register_post_type('services', [
+	register_post_type('service', [
 		'label'  => 'service',
 		'labels' => [
 			'name'               => 'услуги', // основноёе название для типа записи

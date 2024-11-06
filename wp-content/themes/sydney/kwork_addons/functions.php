@@ -74,7 +74,7 @@ function get_post_homework_arr($user_id)
 
 function reg_tax_sfera()
 {
-  register_taxonomy('sfera', ['post', 'gift', 'services'],  [
+  register_taxonomy('sfera', ['post', 'gift', 'service'],  [
 
     'label' => 'Сферы',
     'description' => 'Таксономия сферы',
@@ -101,7 +101,7 @@ function reg_tax_sfera()
 
 function reg_tax_problem()
 {
-  register_taxonomy('problem', ['post', 'services'], [
+  register_taxonomy('problem', ['post', 'service'], [
 
     'label' => 'Проблемы',
     'description' => 'Таксономия проблемы',
@@ -128,7 +128,7 @@ function reg_tax_problem()
 
 function reg_tax_navik()
 {
-  register_taxonomy('navik', ['post', 'services'], [
+  register_taxonomy('navik', ['post', 'service'], [
 
     'label' => 'Навыки',
     'description' => 'Таксономия навыки',
@@ -156,7 +156,7 @@ function reg_tax_navik()
 
 function reg_tax_sex()
 {
-  register_taxonomy('sex', ['post', 'services'], [
+  register_taxonomy('sex', ['post', 'service'], [
 
     'label' => 'Пол',
     'description' => 'Таксономия пол',
@@ -183,7 +183,7 @@ function reg_tax_sex()
 
 function reg_tax_age()
 {
-  register_taxonomy('age', ['post', 'services'], [
+  register_taxonomy('age', ['post', 'service'], [
 
     'label' => 'Возраст',
     'description' => 'Таксономия возраст',
@@ -1515,7 +1515,7 @@ function btn_read()
             </label>
 
             <label class="container js_on">
-              <input type="checkbox" name='filter_type[]' value='services'>
+              <input type="checkbox" name='filter_type[]' value='service'>
               <span class="checkmark"></span>
               <p>Услуги</p>
             </label>
@@ -1652,7 +1652,7 @@ function btn_read()
             <p>Время</p>
           </label>
           <label class="js_on">
-            <input type="checkbox" name='filter_type[]' value='services'>
+            <input type="checkbox" name='filter_type[]' value='service'>
             <p>Услуги</p>
           </label>
 
