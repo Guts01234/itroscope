@@ -1,28 +1,23 @@
 <?php
-// Обработчик для обновления метаполя
-add_action('wp_ajax_update_custom_field', 'update_custom_field_callback');
-add_action('wp_ajax_nopriv_update_custom_field', 'update_custom_field_callback');
-function update_custom_field_callback()
+add_action('wp_ajax_edit_meta_field_action', 'edit_meta_field_callback');
+function edit_meta_field_callback()
 {
-	// Проверяем безопасность nonce
-	check_ajax_referer('update_custom_field_nonce', 'security');
+	check_ajax_referer('edit_meta_field_nonce', 'security');
 
-	$value = sanitize_text_field($_POST['custom_field_value']);
-	$post_id = (isset($_POST['post_id'])) ? intval($_POST['post_id']) : 0;
-	$user_id = get_current_user_id();
-
-	if ($post_id > 0) {
-		update_user_number_card($user_id, $value);
-		wp_send_json_success('Метаполе успешно обновлено!');
+	if (isset($_POST['meta_field_value'])) {
+		$value = sanitize_text_field($_POST['meta_field_value']);
+		// Обновление мета-поля
+		update_user_meta(get_current_user_id(), 'meta_field_key', $value);
+		wp_send_json_success();
 	} else {
-		wp_send_json_error('Ошибка при обновлении метаполя!');
+		wp_send_json_error('Ошибка: Не удалось обновить мета-поле.');
 	}
 
 	wp_die();
 }
 
 ?>
-<form id="update_custom_field_form">
+<form id="update_user_number_card">
 	<input type="hidden" id="post_id" value="POST_ID_HERE">
 	<input type="text" id="custom_field_input" placeholder="Введите свой номер карты">
 	<button id="update_custom_field_button">Сохранить</button>
@@ -33,16 +28,17 @@ function update_custom_field_callback()
 		$('#update_custom_field_button').on('click', function(e) {
 			e.preventDefault();
 
+			var fieldData = $('#custom_field_input').val();
+
 			var data = {
-				action: 'update_custom_field',
-				security: ajax_object.update_custom_field_nonce,
-				custom_field_value: $('#custom_field_input').val(),
-				// post_id: $('#post_id').val()
+				action: 'edit_meta_field_action',
+				security: ajax_object.edit_meta_field_nonce,
+				meta_field_value: fieldData
 			};
 
 			$.post(ajax_object.ajax_url, data, function(response) {
 				if (response.success) {
-					alert('Метаполе успешно обновлено!');
+					alert('Мета-поле успешно обновлено!');
 				} else {
 					alert('Ошибка: ' + response.data);
 				}

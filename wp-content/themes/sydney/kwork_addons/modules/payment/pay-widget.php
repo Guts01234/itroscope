@@ -9,7 +9,7 @@ $user_name = $user->user_login;
 
 // получаем название услуги
 $service_name = get_the_title();
-
+$service_price = 1000;
 ?>
 <form class="payform-tbank" name="payform-tbank" id="payform-tbank">
 	<h4>Выберите дату и время</h4>
