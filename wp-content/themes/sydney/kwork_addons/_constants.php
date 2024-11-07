@@ -3,7 +3,7 @@
 define("SEKRET_KEY", '5aa3c281e42ba7101f7227a7519d5e961c7bcf2b10a42914304bffc1afcebb1d2be98f53caa80d05');
 
 //TerminalKey для интеграции Т-банк
-define('TERMINAL_KEY', '');
+define('TERMINAL_KEY', 'TinkoffBankTest');
 
 //id обычной формы создания уроков
 define('USER_CREATE_LESSON_FORM_ID', 154);

@@ -7,9 +7,6 @@ $user = get_user_by('id', get_current_user_id());
 $user_email = $user->user_email;
 $user_name = $user->user_login;
 
-// получаем цену услуги
-$service_price = 1000;
-
 // получаем название услуги
 $service_name = get_the_title();
 

@@ -43,6 +43,9 @@ require get_template_directory() . '/kwork_addons/modules/gift/index.php';
 // Услуги
 require get_template_directory() . '/kwork_addons/modules/services/index.php';
 
+// Баланс
+require get_template_directory() . '/kwork_addons/modules/balance/index.php';
+
 /*ПОДКЛЮЧЕНИЕ МОДУЛЕЙ КОНЕЦ*/
 
 add_action('init', 'reg_tax_sfera');
