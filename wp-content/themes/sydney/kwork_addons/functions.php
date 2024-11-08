@@ -46,6 +46,9 @@ require get_template_directory() . '/kwork_addons/modules/services/index.php';
 // Баланс
 require get_template_directory() . '/kwork_addons/modules/balance/index.php';
 
+// Логирование
+require get_template_directory() . '/kwork_addons/modules/logfile/index.php';
+
 /*ПОДКЛЮЧЕНИЕ МОДУЛЕЙ КОНЕЦ*/
 
 add_action('init', 'reg_tax_sfera');
