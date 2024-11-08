@@ -2,8 +2,6 @@
 $user_balance = get_user_balance();
 $user_id = get_current_user_id();
 
-
-
 $args = array(
 	'post_type' => 'transaction',
 	'posts_per_page' => 5

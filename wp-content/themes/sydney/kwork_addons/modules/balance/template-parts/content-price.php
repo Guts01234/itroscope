@@ -52,13 +52,6 @@ $user_id = get_current_user_id();
 		const user_balance = document.getElementById('user_balance').value;
 		const user_number_card = document.getElementById('user_number_card').value;
 
-
-		// валидация
-		// if (amount >= user_balance) {
-		// 	alert('Пожалуйста, введите корректную сумму.');
-		// 	return false;
-		// }
-
 		if (!/^\d{16}$/.test(cardNumber)) {
 			alert('Пожалуйста, введите действительный номер карты (16 цифр).');
 			return false;
@@ -74,15 +67,17 @@ $user_id = get_current_user_id();
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Получение данных из формы
-	$cardNumber = sanitize_text_field($_POST['cardNumber']);
+	$card_number = sanitize_text_field($_POST['cardNumber']);
 	$amount = sanitize_text_field($_POST['amount']);
 	$user_id = sanitize_text_field($_POST['user_id']);
+	$user_name = wp_get_current_user()->user_login;
 
 	// минусуем изначальный счет с выведенным
 	sum_user_balance(-$amount);
 
-	if ($user_number_card != $cardNumber) {
-		update_user_number_card($cardNumber);
+	if ($user_number_card != $card_number) {
+		update_user_number_card($card_number);
 	}
 	log_transaction("вывод средств пользователя {$user_id}", -$amount);
+	add_zayavka("Завявка на вывод средст для {$user_name}", $amount,  $card_number, $user_id);
 }
