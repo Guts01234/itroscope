@@ -30,15 +30,7 @@ add_action('um_profile_content_balance_tab', 'um_custom_tab_content_function');
 function um_custom_tab_content_function($args)
 {
 	// Ваш контент для вкладки
-	echo '<h4>Текущий баланс: ' . get_user_balance(get_current_user_id()) . ' руб</h4>';
+	get_template_part('/kwork_addons/modules/balance/template-parts/content', 'price');
 
-	if (!get_user_number_card(get_current_user_id()) != '') {
-		echo '<h4>Номер Вашей карты: ' . get_user_number_card(get_current_user_id()) . '</h4>';
-	} else {
-		get_template_part('kwork_addons/modules/balance/form', 'card');
-	}
-	var_dump(get_user_number_card(get_current_user_id()));
-
-	echo '<h3>Транзакции</h3>';
-	echo '<p>Здесь будут все получения / выводы средств </p>';
+	get_template_part('/kwork_addons/modules/balance/template-parts/content', 'transaction');
 }
