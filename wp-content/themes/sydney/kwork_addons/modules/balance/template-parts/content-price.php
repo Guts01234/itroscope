@@ -8,7 +8,7 @@ $user_id = get_current_user_id();
 <div class="balance__price-block">
 	<div>
 		<h4>Текущий баланс:</h4>
-		<p class="price"><?php echo $user_balance ?> руб</p>
+		<p class="price"><?php echo $user_balance ?> р</p>
 	</div>
 
 	<button id="openPopup">Вывод средств</button>

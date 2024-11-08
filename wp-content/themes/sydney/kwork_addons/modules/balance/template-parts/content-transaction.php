@@ -65,7 +65,7 @@ $transactions = new WP_Query($args);
 					<div class="transaction-details">
 						<span class="transaction-date"><?php echo get_the_date('H:i j-n-Y'); ?></span>
 						<?php if ($transaction > 0) : ?>
-							<span class="transaction-amount-green"> <?php echo '+' . $transaction ?></span>
+							<span class="transaction-amount-green"> <?php echo '+' . $transaction ?> р</span>
 
 					</div>
 
@@ -73,7 +73,7 @@ $transactions = new WP_Query($args);
 				<?php endif; ?>
 
 				<?php if ($transaction < 0) : ?>
-					<span class="transaction-amount-red"> <?php echo $transaction ?></span>
+					<span class="transaction-amount-red"> <?php echo $transaction ?> р</span>
 
 				</div>
 
