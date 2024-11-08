@@ -1,6 +1,7 @@
 <?php
 $user_balance = get_user_balance();
 $user_number_card = get_user_number_card();
+$user_id = get_current_user_id();
 
 ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/kwork_addons/modules/balance/template-parts/content-price.css">
@@ -20,7 +21,7 @@ $user_number_card = get_user_number_card();
 
 			<input type="hidden" id="user_number_card" name="userCardNumber" value="<?php echo $user_number_card ?>">
 			<input type="hidden" id="user_balance" name="amount_max" value="<?php echo $user_balance ?>">
-			<input type="hidden" id="user_id" name="user_id" value="<?php echo get_current_user_id() ?>">
+			<input type="hidden" id="user_id" name="user_id" value="<?php echo $user_id ?>">
 			<label for="cardNumber">Введите номер Вашей карты:</label>
 			<input type="text" id="cardNumber" name="cardNumber" placeholder="Номер карты" required>
 			<label for="amount">Введите сумму вывода:</label>
@@ -51,8 +52,8 @@ $user_number_card = get_user_number_card();
 		const user_balance = document.getElementById('user_balance').value;
 		const user_number_card = document.getElementById('user_number_card').value;
 
-		// валидация
 
+		// валидация
 		// if (amount >= user_balance) {
 		// 	alert('Пожалуйста, введите корректную сумму.');
 		// 	return false;
@@ -78,11 +79,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$user_id = sanitize_text_field($_POST['user_id']);
 
 	// минусуем изначальный счет с выведенным
-	minus_user_balance($amount);
+	sum_user_balance(-$amount);
 
 	if ($user_number_card != $cardNumber) {
 		update_user_number_card($cardNumber);
 	}
-
-	add_zayavka("Вывод средств для пользователя с ID {$user_id}", $amount, $cardNumber, $user_id);
+	log_transaction("вывод средств пользователя {$user_id}", -$amount);
 }
